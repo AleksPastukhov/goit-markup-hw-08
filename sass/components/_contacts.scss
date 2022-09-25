@@ -1,0 +1,33 @@
+// Header contact
+.contact {
+  display: flex;
+  @extend %list;
+
+  &__item:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  &__link {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    font-weight: 500;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.02em;
+    color: currentColor;
+    text-decoration: none;
+    transition: color var(--duration-and-cubic-bezier);
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: var(--accent-text-color);
+  }
+
+  &__icon {
+    fill: currentColor;
+  }
+}

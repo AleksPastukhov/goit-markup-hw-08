@@ -1,0 +1,38 @@
+// Body
+.body {
+  font-family: var(--primary-font);
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+  background-color: var(--main-bg-color);
+}
+
+// Section
+.section {
+  padding: 94px 0;
+  max-width: 1600px;
+  margin-right: auto;
+  margin-left: auto;
+
+  &-title {
+    margin-top: 0;
+    margin-bottom: 50px;
+
+    font-size: 36px;
+    line-height: calc(42 / 36);
+    text-align: center;
+
+    color: var(--title-text-color);
+  }
+  &--secondary-bg-color {
+    background-color: var(--secondary-bg-color);
+  }
+}
+
+// Container
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
+}

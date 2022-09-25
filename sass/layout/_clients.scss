@@ -1,0 +1,26 @@
+// Our clients
+.clients {
+  @extend %list;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+
+  &__link {
+    display: flex;
+    min-width: 170px;
+    min-height: 92px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    fill: var(--social-icon-color);
+    border: 1px solid var(--social-icon-color);
+    border-radius: 4px;
+    transition: fill var(--duration-and-cubic-bezier), border var(--duration-and-cubic-bezier);
+  }
+
+  &__link:hover,
+  &__link:focus {
+    fill: var(--accent-text-color);
+    border: 1px solid var(--accent-border-color);
+  }
+}

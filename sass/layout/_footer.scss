@@ -1,0 +1,26 @@
+// Footer
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--background-footer-color);
+
+  &__container {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    color: var(--white-text-color);
+    margin-bottom: 20px;
+  }
+  &__text-title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: calc(16 / 14);
+    text-transform: uppercase;
+    color: var(--white-text-color);
+  }
+}
