@@ -9,21 +9,19 @@
 
 // Section
 .section {
-  padding: 94px 0;
-  max-width: 1600px;
+  padding: 60px 0;
+  max-width: 480px;
   margin-right: auto;
   margin-left: auto;
+}
+.section-title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 36px;
+  line-height: calc(42 / 36);
+  text-align: center;
+  color: var(--title-text-color);
 
-  &-title {
-    margin-top: 0;
-    margin-bottom: 50px;
-
-    font-size: 36px;
-    line-height: calc(42 / 36);
-    text-align: center;
-
-    color: var(--title-text-color);
-  }
   &--secondary-bg-color {
     background-color: var(--secondary-bg-color);
   }
@@ -31,8 +29,7 @@
 
 // Container
 .container {
-  max-width: 1200px;
+  max-width: 450px;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 15px;
 }

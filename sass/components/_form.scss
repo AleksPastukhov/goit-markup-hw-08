@@ -170,7 +170,7 @@
 
 // Footer form
 .footer-form {
-  display: flex;
+  // display: flex;
   gap: 12px;
   align-items: flex-end;
   justify-content: center;
@@ -181,14 +181,16 @@
     margin-bottom: 20px;
     font-style: normal;
     font-weight: 700;
+    font-size: 14px;
     line-height: calc(16 / 14);
     text-transform: uppercase;
+    text-align: center;
     color: var(--white-text-color);
   }
 
   &__input {
     padding-left: 16px;
-    min-width: 358px;
+    width: 100%;
     min-height: 50px;
     background-color: transparent;
     border: 1px solid var(--footer-form-border-color);
@@ -196,6 +198,7 @@
     border-radius: 4px;
     color: var(--white-text-color);
     transition: border-color var(--duration-and-cubic-bezier);
+    margin-bottom: 20px;
   }
 
   &__input::placeholder {
@@ -226,7 +229,9 @@
     color: var(--white-text-color);
     min-height: 50px;
     min-width: 200px;
-    margin: 0;
+    // margin: 0;
+    margin-right: auto;
+    margin-left: auto;
     padding: 0;
     cursor: pointer;
   }

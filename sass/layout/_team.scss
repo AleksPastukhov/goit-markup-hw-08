@@ -1,13 +1,22 @@
 // Team
+.team {
+  background: var(--secondary-bg-color);
+
+  .section-title {
+    font-size: 28px;
+    line-height: calc(33 / 28);
+  }
+}
 .team-card-set {
   @extend %list;
-  display: flex;
-  justify-content: space-between;
+  // display: flex;
+  // justify-content: space-between;
 }
 
 .employee-card {
   text-align: center;
-  width: 270px;
+  padding-bottom: 24px;
+  // width: 270px;
   background: var(--main-bg-color);
 
   box-shadow: 0px 1px 3px var(--box-shadow-color-a12), 0px 1px 1px var(--box-shadow-color-a14),
@@ -15,7 +24,10 @@
   border-radius: 0px 0px 4px 4px;
 
   &__img {
+    width: 100%;
     display: block;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 0;
     margin-bottom: 0;
   }
@@ -36,5 +48,9 @@
     padding-bottom: 16px;
     font-size: 16px;
     line-height: calc(19 / 16);
+  }
+
+  &--margin-bottom {
+    margin-bottom: 30px;
   }
 }

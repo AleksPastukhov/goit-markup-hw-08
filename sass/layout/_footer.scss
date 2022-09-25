@@ -3,16 +3,18 @@
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--background-footer-color);
+  max-width: 480px;
 
   &__container {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
+    // display: flex;
+    // align-items: baseline;
+    // justify-content: space-between;
   }
 
   &__logo {
     color: var(--white-text-color);
     margin-bottom: 20px;
+    text-align: center;
   }
   &__text-title {
     margin-top: 0;
@@ -20,7 +22,12 @@
     font-style: normal;
     font-weight: 700;
     line-height: calc(16 / 14);
+    text-align: center;
     text-transform: uppercase;
     color: var(--white-text-color);
+  }
+
+  &__social-box {
+    margin-bottom: 60px;
   }
 }

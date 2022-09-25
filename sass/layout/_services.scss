@@ -1,11 +1,18 @@
 // Services
-.services-list {
-  @extend %list;
-  display: flex;
-  justify-content: space-between;
+.services {
+  display: none;
+  &__title {
+  }
+
+  &-list {
+    @extend %list;
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .services-card {
+  display: none;
   position: relative;
 
   &__img {

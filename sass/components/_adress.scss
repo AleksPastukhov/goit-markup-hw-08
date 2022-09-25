@@ -1,12 +1,14 @@
 // Adress
 .adress {
   font-style: inherit;
+  text-align: center;
+
   &__list {
     @extend %list;
   }
 
   &__item:not(:last-child) {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
   }
 
   &__link {
@@ -23,5 +25,9 @@
   &__link--hover-focus:hover,
   &__link--hover-focus:focus {
     color: var(--accent-text-color);
+  }
+
+  &--margin-bottom {
+    margin-bottom: 60px;
   }
 }

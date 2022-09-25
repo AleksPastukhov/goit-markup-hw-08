@@ -1,6 +1,7 @@
 // Header contact
 .contact {
-  display: flex;
+  display: none;
+  // display: flex;
   @extend %list;
 
   &__item:not(:last-child) {

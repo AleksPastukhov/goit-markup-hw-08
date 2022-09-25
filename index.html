@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Інші мета-теги -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Студія</title>
 
     <!-- Fonts -->
@@ -22,8 +24,8 @@
 
     <header class="header">
       <div class="container header__container">
+        <a class="logo" href="./index.html"><span class="logo--accent">Web</span>Studio</a>
         <nav class="nav">
-          <a class="logo" href="./index.html"><span class="logo--accent">Web</span>Studio</a>
           <ul class="nav__list">
             <li class="nav__item">
               <a class="nav__link nav__link--current" href="./index.html">Студія</a>
@@ -118,9 +120,9 @@
       </section>
 
       <!--  Services -->
-      <section class="section">
+      <section class="section services">
         <div class="container">
-          <h2 class="section-title">Чим ми займаємося</h2>
+          <h2 class="section__title">Чим ми займаємося</h2>
           <ul class="services-list">
             <li class="services-list__item">
               <div class="services-card">
@@ -163,21 +165,75 @@
       </section>
 
       <!-- Team -->
-      <section class="section section--secondary-bg-color">
+      <section class="section team section--secondary-bg-color">
         <div class="container">
           <h2 class="section-title">Наша команда</h2>
           <ul class="team-card-set">
-            <li class="employee-card">
-              <img
-                class="employee-card__img"
-                src="./images/team/demyanenko.jpeg"
-                alt="фото Ігора Демʼяненка"
-                width="270"
-                height="260"
-              />
+            <li class="employee-card employee-card--margin-bottom">
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/desctop/demianenko-270.webp    1x,
+                    ./images/team/desctop/demianenko-270@2x.webp 2x,
+                    ./images/team/desctop/demianenko-270@3x.webp 3x
+                  "
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/desctop/demianenko-270.jpg    1x,
+                    ./images/team/desctop/demianenko-270@2x.jpg 2x,
+                    ./images/team/desctop/demianenko-270@3x.jpg 3x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/tablet/demianenko-354.webp    1x,
+                    ./images/team/tablet/demianenko-354@2x.webp 2x,
+                    ./images/team/tablet/demianenko-354@3x.webp 3x
+                  "
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/tablet/demianenko-354.jpg    1x,
+                    ./images/team/tablet/demianenko-354@2x.jpg 2x,
+                    ./images/team/tablet/demianenko-354@3x.jpg 3x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/mobile/demianenko-450.webp    1x,
+                    ./images/team/mobile/demianenko-450@2x.webp 2x,
+                    ./images/team/mobile/demianenko-450@3x.webp 3x
+                  "
+                  type="image/webp"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/mobile/demianenko-450.jpg    1x,
+                    ./images/team/mobile/demianenko-450@2x.jpg 2x,
+                    ./images/team/mobile/demianenko-450@3x.jpg 3x
+                  "
+                  media="(max-width: 767px)"
+                />
+
+                <img
+                  class="employee-card__img"
+                  src="./images/team/mobile/demianenko-450.jpg"
+                  alt="фото Ігора Демʼяненка"
+                  max-width="450"
+                  max-height="460"
+                />
+              </picture>
               <h3 class="employee-card__title">Ігор Дем'яненко</h3>
               <p class="employee-card__position" lang="en">Product Designer</p>
-              <ul class="social-networks social-networks--margin-bottom">
+              <ul class="social-networks">
                 <li class="social-networks__item">
                   <a
                     class="social-networks__link"
@@ -224,14 +280,68 @@
                 </li>
               </ul>
             </li>
-            <li class="employee-card">
-              <img
-                class="employee-card__img"
-                src="./images/team/repina.jpeg"
-                alt="фото Ольги Репіної"
-                width="270"
-                height="260"
-              />
+            <li class="employee-card employee-card--margin-bottom">
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/desctop/repina-270.webp    1x,
+                    ./images/team/desctop/repina-270@2x.webp 2x,
+                    ./images/team/desctop/repina-270@3x.webp 3x
+                  "
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/desctop/repina-270.jpg    1x,
+                    ./images/team/desctop/repina-270@2x.jpg 2x,
+                    ./images/team/desctop/repina-270@3x.jpg 3x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/tablet/repina-354.webp       1x,
+                    ./images/team/tablet/repina-354@2x.webp    2x,
+                    ./images/team/tablet/repina-235470@3x.webp 3x
+                  "
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/tablet/repina-354.jpg    1x,
+                    ./images/team/tablet/repina-354@2x.jpg 2x,
+                    ./images/team/tablet/repina-354@3x.jpg 3x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/mobile/repina-450.webp    1x,
+                    ./images/team/mobile/repina-450@2x.webp 2x,
+                    ./images/team/mobile/repina-450@3x.webp 3x
+                  "
+                  type="image/webp"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/mobile/repina-450.jpg    1x,
+                    ./images/team/mobile/repina-450@2x.jpg 2x,
+                    ./images/team/mobile/repina-450@3x.jpg 3x
+                  "
+                  media="(max-width: 767px)"
+                />
+
+                <img
+                  class="employee-card__img"
+                  src="./images/team/mobile/repina-450.jpg"
+                  alt="фото Ольги Репіної"
+                  max-width="450"
+                  max-height="460"
+                />
+              </picture>
               <h3 class="employee-card__title">Ольга Рєпіна</h3>
               <p class="employee-card__position" lang="en">Frontend Developer</p>
               <ul class="social-networks social-networks--margin-bottom">
@@ -281,14 +391,68 @@
                 </li>
               </ul>
             </li>
-            <li class="employee-card">
-              <img
-                class="employee-card__img"
-                src="./images/team/tarasov.jpeg"
-                alt="фото Миколи Тарасова"
-                width="270"
-                height="260"
-              />
+            <li class="employee-card employee-card--margin-bottom">
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/desctop/tarasov-270.webp    1x,
+                    ./images/team/desctop/tarasov-270@2x.webp 2x,
+                    ./images/team/desctop/tarasov-270@3x.webp 3x
+                  "
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/desctop/tarasov-270.jpg    1x,
+                    ./images/team/desctop/tarasov-270@2x.jpg 2x,
+                    ./images/team/desctop/tarasov-270@3x.jpg 3x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/tablet/tarasov-354.webp       1x,
+                    ./images/team/tablet/tarasov-354@2x.webp    2x,
+                    ./images/team/tablet/tarasov-235470@3x.webp 3x
+                  "
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/tablet/tarasov-354.jpg    1x,
+                    ./images/team/tablet/tarasov-354@2x.jpg 2x,
+                    ./images/team/tablet/tarasov-354@3x.jpg 3x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/mobile/tarasov-450.webp    1x,
+                    ./images/team/mobile/tarasov-450@2x.webp 2x,
+                    ./images/team/mobile/tarasov-450@3x.webp 3x
+                  "
+                  type="image/webp"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/mobile/tarasov-450.jpg    1x,
+                    ./images/team/mobile/tarasov-450@2x.jpg 2x,
+                    ./images/team/mobile/tarasov-450@3x.jpg 3x
+                  "
+                  media="(max-width: 767px)"
+                />
+
+                <img
+                  class="employee-card__img"
+                  src="./images/team/mobile/tarasov-450.jpg"
+                  alt="фото Миколи Тарасова"
+                  max-width="450"
+                  max-height="460"
+                />
+              </picture>
               <h3 class="employee-card__title">Микола Тарасов</h3>
               <p class="employee-card__position" lang="en">Marketing</p>
               <ul class="social-networks social-networks--margin-bottom">
@@ -339,13 +503,67 @@
               </ul>
             </li>
             <li class="employee-card">
-              <img
-                class="employee-card__img"
-                src="./images/team/ermakov.jpeg"
-                alt="фото Михайла Єрмакова"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/desctop/ermakov-270.webp    1x,
+                    ./images/team/desctop/ermakov-270@2x.webp 2x,
+                    ./images/team/desctop/ermakov-270@3x.webp 3x
+                  "
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/desctop/ermakov-270.jpg    1x,
+                    ./images/team/desctop/ermakov-270@2x.jpg 2x,
+                    ./images/team/desctop/ermakov-270@3x.jpg 3x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/tablet/ermakov-354.webp       1x,
+                    ./images/team/tablet/ermakov-354@2x.webp    2x,
+                    ./images/team/tablet/ermakov-235470@3x.webp 3x
+                  "
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/tablet/ermakov-354.jpg    1x,
+                    ./images/team/tablet/ermakov-354@2x.jpg 2x,
+                    ./images/team/tablet/ermakov-354@3x.jpg 3x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/mobile/ermakov-450.webp    1x,
+                    ./images/team/mobile/ermakov-450@2x.webp 2x,
+                    ./images/team/mobile/ermakov-450@3x.webp 3x
+                  "
+                  type="image/webp"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/mobile/ermakov-450.jpg    1x,
+                    ./images/team/mobile/ermakov-450@2x.jpg 2x,
+                    ./images/team/mobile/ermakov-450@3x.jpg 3x
+                  "
+                  media="(max-width: 767px)"
+                />
+
+                <img
+                  class="employee-card__img"
+                  src="./images/team/mobile/ermakov-450.jpg"
+                  alt="фото Михайла Єрмакова"
+                  max-width="450"
+                  max-height="460"
+                />
+              </picture>
               <h3 class="employee-card__title">Михайло Єрмаков</h3>
               <p class="employee-card__position" lang="en">UI Designer</p>
               <ul class="social-networks social-networks--margin-bottom">
@@ -400,84 +618,84 @@
       </section>
 
       <!-- Our clients -->
-      <section class="section">
+      <section class="section clients">
         <div class="container">
           <h2 class="section-title">Постійні клієнти</h2>
-          <ul class="clients">
-            <li class="clients__item">
+          <ul class="clients-list">
+            <li class="clients-list__item">
               <a
-                class="clients__link"
+                class="clients-list__link"
                 href=""
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="ya-co"
               >
-                <svg class="clients__icon" width="106px" height="60px">
+                <svg class="clients-list__icon" width="106px" height="60px">
                   <use href="./images/icons.svg#ya-co"></use>
                 </svg>
               </a>
             </li>
-            <li class="clients__item">
+            <li class="clients-list__item">
               <a
-                class="clients__link"
+                class="clients-list__link"
                 href=""
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="ya-co"
               >
-                <svg class="clients__icon" width="106px" height="60px">
+                <svg class="clients-list__icon" width="106px" height="60px">
                   <use href="./images/icons.svg#company-tagline-here"></use>
                 </svg>
               </a>
             </li>
-            <li class="clients__item">
+            <li class="clients-list__item">
               <a
-                class="clients__link"
+                class="clients-list__link"
                 href=""
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="company"
               >
-                <svg class="clients__icon" width="106px" height="60px">
+                <svg class="clients-list__icon" width="106px" height="60px">
                   <use href="./images/icons.svg#ya-co"></use>
                 </svg>
               </a>
             </li>
-            <li class="clients__item">
+            <li class="clients-list__item">
               <a
-                class="clients__link"
+                class="clients-list__link"
                 href=""
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="ya-co"
               >
-                <svg class="clients__icon" width="106px" height="60px">
+                <svg class="clients-list__icon" width="106px" height="60px">
                   <use href="./images/icons.svg#foster-peters"></use>
                 </svg>
               </a>
             </li>
-            <li class="clients__item">
+            <li class="clients-list__item">
               <a
-                class="clients__link"
+                class="clients-list__link"
                 href=""
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="ya-co"
               >
-                <svg class="clients__icon" width="106px" height="60px">
+                <svg class="clients-list__icon" width="106px" height="60px">
                   <use href="./images/icons.svg#brand"></use>
                 </svg>
               </a>
             </li>
-            <li class="clients__item">
+            <li class="clients-list__item">
               <a
-                class="clients__link"
+                class="clients-list__link"
                 href=""
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="ya-co"
               >
-                <svg class="clients__icon" width="106px" height="60px">
+                <svg class="clients-list__icon" width="106px" height="60px">
                   <use href="./images/icons.svg#company-tag-line"></use>
                 </svg>
               </a>
@@ -488,13 +706,13 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="section footer">
       <div class="container footer__container">
         <div class="footer__address-box">
           <a class="logo footer__logo" href="./index.html"
             ><span class="logo--accent">Web</span>Studio</a
           >
-          <address class="adress">
+          <address class="adress adress--margin-bottom">
             <ul class="adress__list">
               <li class="adress__item">
                 <a class="adress__link adress__link--white-color" href=""
