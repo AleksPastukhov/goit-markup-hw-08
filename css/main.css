@@ -33,7 +33,7 @@
   --footer-form-border-color: rgba(255, 255, 255, 0.3);
 }
 
-.portfolio, .btn-list, .clients-list, .team-card-set, .services-list, .advantages-set, .adress__list, .social-networks, .contact, .nav__list {
+.portfolio, .btn-list, .clients-list, .team-card-set, .services-list, .advantages-set, .adress__list, .social-networks, .socials-list, .contact, .nav__list {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -345,27 +345,53 @@ summary {
   color: var(--accent-text-color);
 }
 
-.nav {
+.menu-container {
   display: none;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 93px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 48px 40px;
+  background-color: var(--main-bg-color);
+  z-index: 100;
 }
-.nav__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.menu-container.is-open {
+  display: block;
+}
+.menu-container__close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+.menu-container__close-btn:hover, .menu-container__close-btn:focus {
+  fill: var(--accent-text-color);
+}
+
+.open-menu-btn {
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+.open-menu-btn:hover, .open-menu-btn:focus {
+  fill: var(--accent-text-color);
+}
+
+.nav--margin-bottom {
+  margin-bottom: 306px;
 }
 .nav__item:not(:last-child) {
-  margin-right: 50px;
+  margin-bottom: 32px;
 }
 .nav__link {
   display: inline-block;
-  padding-top: 32px;
-  padding-bottom: 32px;
   font-weight: 500;
-  line-height: 1.1428571429;
+  font-style: normal;
+  font-size: 40px;
+  line-height: 0.8510638298;
   letter-spacing: 0.02em;
   color: var(--title-text-color);
   text-decoration: none;
@@ -379,36 +405,17 @@ summary {
   position: relative;
   color: var(--accent-text-color);
 }
-.nav__link--current::after {
-  position: absolute;
-  left: 0;
-  bottom: -1px;
-  display: block;
-  content: "";
-  background-color: var(--accent-text-color);
-  border-radius: 2px;
-  width: 100%;
-  height: 4px;
-}
 
-.contact {
-  display: none;
+.contact--margin-bottom {
+  margin-bottom: 64px;
 }
 .contact__item:not(:last-child) {
-  margin-right: 50px;
+  margin-bottom: 32px;
 }
 .contact__link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 10px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
   font-weight: 500;
-  line-height: 1.1428571429;
+  font-size: 34px;
+  line-height: 1.1764705882;
   letter-spacing: 0.02em;
   color: currentColor;
   text-decoration: none;
@@ -419,7 +426,36 @@ summary {
   color: var(--accent-text-color);
 }
 .contact__icon {
+  display: none;
   fill: currentColor;
+}
+
+.socials-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.socials-list__items:not(:last-child) {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+.socials-list__link {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2222222222;
+  letter-spacing: 0.02em;
+  color: var(--accent-text-color);
+  text-decoration: none;
+  padding: 0 5px;
+}
+.socials-list__link--pading-left-0 {
+  padding-left: 0;
+}
+.socials-list__link--pading-right-0 {
+  padding-right: 0;
 }
 
 .backdrop {
@@ -448,7 +484,8 @@ summary {
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
   opacity: 1;
-  width: 528px;
+  width: 100%;
+  max-width: 450px;
   padding: 40px;
   background-color: var(--main-bg-color);
   -webkit-box-shadow: 0px 1px 3px var(--box-shadow-color-a12), 0px 1px 1px var(--box-shadow-color-a14), 0px 2px 1px var(--box-shadow-color-a20);
@@ -491,6 +528,9 @@ summary {
   fill: var(--accent-text-color);
 }
 
+.order-form {
+  width: 100%;
+}
 .order-form__title {
   display: block;
   font-size: 20px;
@@ -529,10 +569,6 @@ summary {
           box-shadow: 0px 4px 4px var(--box-shadow-color-a15);
 }
 
-.user-data {
-  display: block;
-  width: 100%;
-}
 .user-data--margin-bottom {
   margin-bottom: 20px;
 }
@@ -837,6 +873,17 @@ summary {
 
 .header {
   border-bottom: 1px solid #ececec;
+}
+.header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .hero {

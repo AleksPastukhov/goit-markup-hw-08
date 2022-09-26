@@ -1,5 +1,6 @@
 // Order form
 .order-form {
+  width: 100%;
   &__title {
     display: block;
     font-size: 20px;
@@ -39,13 +40,14 @@
 // User data
 
 .user-data {
-  display: block;
-  width: 100%;
+  // display: block;
+  // width: 100%;
 
   &--margin-bottom {
     margin-bottom: 20px;
   }
 }
+
 .field {
   display: block;
   width: 100%;

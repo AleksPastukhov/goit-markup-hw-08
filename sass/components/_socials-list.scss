@@ -1,0 +1,28 @@
+.socials-list {
+  @extend %list;
+  display: flex;
+  align-items: center;
+
+  &__items:not(:last-child) {
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+  }
+
+  &__link {
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: calc(22 / 18);
+    letter-spacing: 0.02em;
+    color: var(--accent-text-color);
+    text-decoration: none;
+    padding: 0 5px;
+  }
+
+  &__link--pading-left-0 {
+    padding-left: 0;
+  }
+
+  &__link--pading-right-0 {
+    padding-right: 0;
+  }
+}
