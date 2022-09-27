@@ -47,7 +47,7 @@
   screen and (min-resolution: 2dppx) {
   .hero {
     background-image: linear-gradient(to right, var(--bg-overlay), var(--bg-overlay)),
-      url(../../images/bg/hero-mobile-bg@2x.jpeg);
+      url(../images/bg/hero-mobile-bg@2x.jpeg);
     background-size: cover;
   }
 }
@@ -57,7 +57,7 @@
   screen and (min-resolution: 3dppx) {
   .hero {
     background-image: linear-gradient(to right, var(--bg-overlay), var(--bg-overlay)),
-      url(../../images/bg/hero-mobile-bg@3x.jpeg);
+      url(../images/bg/hero-mobile-bg@3x.jpeg);
 
     background-size: cover;
   }
