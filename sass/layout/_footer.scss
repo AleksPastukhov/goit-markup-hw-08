@@ -3,13 +3,43 @@
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--background-footer-color);
-  max-width: 480px;
 
-  &__container {
-    // display: flex;
-    // align-items: baseline;
-    // justify-content: space-between;
+  &__wrapper {
+    margin-bottom: 60px;
+
+    @include breakpoint-min($tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 60px;
+      padding-left: 76px;
+      padding-right: 89px;
+    }
   }
+
+  &__address-box {
+    margin-bottom: 60px;
+    @include breakpoint-min($tablet) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__subscribe-box {
+    @include breakpoint-min($tablet) {
+      max-width: 450px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+  // &__container {
+  //   @include breakpoint-min($tablet) {
+  //     display: flex;
+  //     flex-wrap: wrap;
+  //     align-items: baseline;
+  //     justify-content: space-between;
+  //   }
+  // }
 
   &__logo {
     color: var(--white-text-color);
@@ -25,9 +55,5 @@
     text-align: center;
     text-transform: uppercase;
     color: var(--white-text-color);
-  }
-
-  &__social-box {
-    margin-bottom: 60px;
   }
 }

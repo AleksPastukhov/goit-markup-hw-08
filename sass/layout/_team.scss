@@ -9,8 +9,13 @@
 }
 .team-card-set {
   @extend %list;
-  // display: flex;
-  // justify-content: space-between;
+
+  @include breakpoint-min($tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    // justify-content: space-between;
+  }
 }
 
 .employee-card {
@@ -52,5 +57,10 @@
 
   &--margin-bottom {
     margin-bottom: 30px;
+  }
+
+  @include breakpoint-min($tablet) {
+    margin-bottom: 0;
+    min-width: 354px;
   }
 }

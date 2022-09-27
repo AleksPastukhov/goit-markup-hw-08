@@ -1,10 +1,15 @@
 // Header
 .header {
+  min-width: 320px;
   border-bottom: 1px solid #ececec;
 
   &__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include breakpoint-min($tablet) {
+      gap: 87px;
+    }
   }
 }

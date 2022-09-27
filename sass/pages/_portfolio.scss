@@ -5,10 +5,14 @@
   display: flex;
   flex-wrap: wrap;
   gap: 15px 8px;
-  // justify-content: center;
 
   &--margin-bottom {
     margin-bottom: 40px;
+  }
+
+  @include breakpoint-min($tablet) {
+    justify-content: center;
+    margin-bottom: 30px;
   }
 }
 
@@ -50,12 +54,23 @@
 
 .portfolio {
   @extend %list;
-  // display: flex;
-  // flex-wrap: wrap;
-  // gap: 30px;
 
-  &__item:not(:last-child) {
-    margin-bottom: 30px;
+  @include breakpoint-min($tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+      @include breakpoint-min($tablet) {
+        margin-bottom: 0;
+      }
+    }
+    @include breakpoint-min($tablet) {
+      max-width: 354px;
+    }
   }
 
   &__link {
@@ -112,6 +127,10 @@
     border-right: 1px solid #eeeeee;
     border-bottom: 1px solid #eeeeee;
     border-left: 1px solid #eeeeee;
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      height: 146px;
+    }
   }
 
   &__title {

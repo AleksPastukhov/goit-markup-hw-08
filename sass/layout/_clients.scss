@@ -22,6 +22,10 @@
     border: 1px solid var(--social-icon-color);
     border-radius: 4px;
     transition: fill var(--duration-and-cubic-bezier), border var(--duration-and-cubic-bezier);
+
+    @include breakpoint-min($tablet) {
+      padding: 15px 59px;
+    }
   }
 
   &__link:hover,

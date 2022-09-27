@@ -8,8 +8,6 @@
 
 .advantages-set {
   @extend %list;
-  // display: flex;
-  // gap: 30px;
 
   &__item:not(:last-child) {
     // flex-basis: 270px;
@@ -40,5 +38,14 @@
     margin-bottom: 0;
 
     line-height: calc(24 / 14);
+  }
+
+  @include breakpoint-min($tablet) {    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    &__item {
+      max-width: 354px;
+    }
   }
 }

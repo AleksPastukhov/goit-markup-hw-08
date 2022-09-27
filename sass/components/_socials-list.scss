@@ -1,10 +1,49 @@
 .socials-list {
   @extend %list;
   display: flex;
+  gap: 10px;
+  // justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
 
-  &__items:not(:last-child) {
-    border-right: 1px solid rgba(33, 33, 33, 0.2);
+  @include breakpoint-min($tablet) {
+    display: none;
+  }
+
+  &__items {
+    display: flex;
+    position: relative;
+  }
+
+  @include breakpoint-min(407px) {
+    &__items:not(:last-child)::after {
+      content: '';
+      display: block;
+      height: 22px;
+      width: 1px;
+      background-color: rgba(33, 33, 33, 0.2);
+      position: absolute;
+      top: 0;
+      right: -5px;
+    }
+  }
+
+  @include breakpoint-max(406px) {
+    &__items:not(:nth-child(2n)) ::after {
+      content: '';
+      display: block;
+      height: 22px;
+      width: 1px;
+      background-color: rgba(33, 33, 33, 0.2);
+      position: absolute;
+      top: 0;
+      right: -5px;
+    }
+    &__items:not(:nth-child(2n)) {
+      min-width: 85px;
+    }
+    width: 230px;
+    gap: 25px 10px;
   }
 
   &__link {
@@ -15,7 +54,6 @@
     letter-spacing: 0.02em;
     color: var(--accent-text-color);
     text-decoration: none;
-    padding: 0 5px;
   }
 
   &__link--pading-left-0 {
