@@ -1085,8 +1085,8 @@ summary {
   text-align: center;
   margin-right: auto;
   margin-left: auto;
-  background-image: -webkit-gradient(linear, left top, right top, from(var(--bg-overlay)), to(var(--bg-overlay))), url(../../images/bg/hero-mobile-bg.jpeg);
-  background-image: linear-gradient(to right, var(--bg-overlay), var(--bg-overlay)), url(../../images/bg/hero-mobile-bg.jpeg);
+  background-image: -webkit-gradient(linear, left top, right top, from(var(--bg-overlay)), to(var(--bg-overlay))), url(../images/bg/hero-mobile-bg.jpeg);
+  background-image: linear-gradient(to right, var(--bg-overlay), var(--bg-overlay)), url(../images/bg/hero-mobile-bg.jpeg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
