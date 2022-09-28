@@ -411,6 +411,7 @@ summary {
           transform: scale(1);
   opacity: 1;
   visibility: visible;
+  pointer-events: all;
   -webkit-transition: opacity var(--duration-and-cubic-bezier), visibility var(--duration-and-cubic-bezier), -webkit-transform var(--duration-and-cubic-bezier);
   transition: opacity var(--duration-and-cubic-bezier), visibility var(--duration-and-cubic-bezier), -webkit-transform var(--duration-and-cubic-bezier);
   transition: transform var(--duration-and-cubic-bezier), opacity var(--duration-and-cubic-bezier), visibility var(--duration-and-cubic-bezier);
@@ -451,6 +452,7 @@ summary {
             transform: translateX(0);
     opacity: 1;
     visibility: visible;
+    pointer-events: all;
   }
 }
 

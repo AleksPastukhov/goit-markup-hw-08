@@ -22,6 +22,7 @@
     transform: scale(1);
     opacity: 1;
     visibility: visible;
+    pointer-events: all;
     transition: transform var(--duration-and-cubic-bezier), opacity var(--duration-and-cubic-bezier),
       visibility var(--duration-and-cubic-bezier);
   }
@@ -54,6 +55,7 @@
     transform: translateX(0);
     opacity: 1;
     visibility: visible;
+    pointer-events: all;
   }
 }
 
