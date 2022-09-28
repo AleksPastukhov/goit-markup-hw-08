@@ -379,7 +379,6 @@ summary {
 }
 
 .menu-container {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -388,6 +387,16 @@ summary {
   padding: 48px 40px;
   background-color: var(--main-bg-color);
   z-index: 100;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  opacity: 0;
+  -webkit-transition: opacity var(--duration-and-cubic-bezier), visibility var(--duration-and-cubic-bezier), -webkit-transform var(--duration-and-cubic-bezier);
+  transition: opacity var(--duration-and-cubic-bezier), visibility var(--duration-and-cubic-bezier), -webkit-transform var(--duration-and-cubic-bezier);
+  transition: transform var(--duration-and-cubic-bezier), opacity var(--duration-and-cubic-bezier), visibility var(--duration-and-cubic-bezier);
+  transition: transform var(--duration-and-cubic-bezier), opacity var(--duration-and-cubic-bezier), visibility var(--duration-and-cubic-bezier), -webkit-transform var(--duration-and-cubic-bezier);
+  overflow: hidden;
+  pointer-events: none;
+  visibility: hidden;
 }
 .menu-container.is-open {
   display: -webkit-box;
@@ -397,8 +406,15 @@ summary {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  outline: 1px solid red;
   overflow-y: scroll;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity var(--duration-and-cubic-bezier), visibility var(--duration-and-cubic-bezier), -webkit-transform var(--duration-and-cubic-bezier);
+  transition: opacity var(--duration-and-cubic-bezier), visibility var(--duration-and-cubic-bezier), -webkit-transform var(--duration-and-cubic-bezier);
+  transition: transform var(--duration-and-cubic-bezier), opacity var(--duration-and-cubic-bezier), visibility var(--duration-and-cubic-bezier);
+  transition: transform var(--duration-and-cubic-bezier), opacity var(--duration-and-cubic-bezier), visibility var(--duration-and-cubic-bezier), -webkit-transform var(--duration-and-cubic-bezier);
 }
 .menu-container__close-btn {
   position: absolute;
@@ -407,6 +423,8 @@ summary {
   border: 0;
   background: none;
   cursor: pointer;
+  -webkit-transition: fill var(--duration-and-cubic-bezier);
+  transition: fill var(--duration-and-cubic-bezier);
 }
 .menu-container__close-btn:hover, .menu-container__close-btn:focus {
   fill: var(--accent-text-color);
@@ -429,13 +447,20 @@ summary {
             justify-content: space-between;
     position: static;
     padding: 0;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
   }
 }
 
 .open-menu-btn {
   border: 0;
   background: none;
+  padding: 0;
   cursor: pointer;
+  -webkit-transition: fill var(--duration-and-cubic-bezier);
+  transition: fill var(--duration-and-cubic-bezier);
 }
 .open-menu-btn:hover, .open-menu-btn:focus {
   fill: var(--accent-text-color);

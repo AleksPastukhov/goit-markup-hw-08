@@ -1,5 +1,4 @@
 .menu-container {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -8,12 +7,23 @@
   padding: 48px 40px;
   background-color: var(--main-bg-color);
   z-index: 100;
+  transform: scale(0.9);
+  opacity: 0;
+  transition: transform var(--duration-and-cubic-bezier), opacity var(--duration-and-cubic-bezier),
+    visibility var(--duration-and-cubic-bezier);
+  overflow: hidden;
+  pointer-events: none;
+  visibility: hidden;
 
   &.is-open {
     display: flex;
     flex-direction: column;
-    outline: 1px solid red;
     overflow-y: scroll;
+    transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+    transition: transform var(--duration-and-cubic-bezier), opacity var(--duration-and-cubic-bezier),
+      visibility var(--duration-and-cubic-bezier);
   }
 
   &__close-btn {
@@ -23,6 +33,7 @@
     border: 0;
     background: none;
     cursor: pointer;
+    transition: fill var(--duration-and-cubic-bezier);
 
     &:hover,
     &:focus {
@@ -40,6 +51,9 @@
     justify-content: space-between;
     position: static;
     padding: 0;
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
   }
 }
 
@@ -48,6 +62,7 @@
   background: none;
   padding: 0;
   cursor: pointer;
+  transition: fill var(--duration-and-cubic-bezier);
 
   &:hover,
   &:focus {
