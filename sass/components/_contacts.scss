@@ -1,6 +1,5 @@
 // Header contact
 .contact {
-  // display: flex;
   @extend %list;
 
   &--margin-bottom {
@@ -19,11 +18,12 @@
     @include breakpoint-min($tablet) {
       margin-bottom: 10px;
     }
+    @include breakpoint-min($desktop) {
+      margin-bottom: 0;
+    }
   }
 
   &__link {
-    // padding-top: 32px;
-    // padding-bottom: 32px;
     width: 100%;
     font-weight: 500;
     font-size: 24px;
@@ -41,6 +41,11 @@
       display: flex;
       gap: 8px;
       align-items: center;
+    }
+
+    @include breakpoint-min($desktop) {
+      padding-top: 32px;
+      padding-bottom: 32px;
     }
 
     &--color-accent {
@@ -73,5 +78,12 @@
     @include breakpoint-min($tablet) {
       display: block;
     }
+  }
+
+  @include breakpoint-min($desktop) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
   }
 }

@@ -15,18 +15,16 @@
 .section {
   min-width: 320px;
   padding: 60px 0;
-  max-width: 480px;
   margin-right: auto;
   margin-left: auto;
 
   @include breakpoint-min($tablet) {
-    width: 768px;
     max-width: none;
   }
 
   @include breakpoint-min($desktop) {
-    width: 1200px;
-    max-width: none;
+    max-width: 1600px;
+    padding: 94px 0;
   }
 }
 .section-title {
@@ -40,11 +38,16 @@
   &--secondary-bg-color {
     background-color: var(--secondary-bg-color);
   }
+
+  @include breakpoint-min($desktop) {
+    margin-bottom: 50px;
+  }
 }
 
 // Container
 .container {
   padding: 0 15px;
+  min-width: 320px;
   max-width: 480px;
   margin-left: auto;
   margin-right: auto;

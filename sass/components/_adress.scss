@@ -3,15 +3,24 @@
   font-style: inherit;
   text-align: center;
 
+  @include breakpoint-min($desktop) {
+    text-align: start;
+  }
+
   &__list {
     @extend %list;
   }
 
   &__item:not(:last-child) {
     margin-bottom: 8px;
+
+    @include breakpoint-min($desktop) {
+      margin-bottom: 9px;
+    }
   }
 
   &__link {
+    display: block;
     line-height: calc(24 / 14);
     color: var(--secondary-text-color-a60);
     text-decoration: none;

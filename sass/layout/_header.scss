@@ -11,5 +11,8 @@
     @include breakpoint-min($tablet) {
       gap: 87px;
     }
+    @include breakpoint-min($desktop) {
+      gap: 92px;
+    }
   }
 }

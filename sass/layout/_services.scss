@@ -1,6 +1,11 @@
 // Services
 .services {
   display: none;
+
+  @include breakpoint-min($desktop) {
+    display: block;
+  }
+
   &__title {
   }
 
@@ -14,6 +19,10 @@
 .services-card {
   display: none;
   position: relative;
+
+  @include breakpoint-min($desktop) {
+    display: flex;
+  }
 
   &__img {
     display: block;
