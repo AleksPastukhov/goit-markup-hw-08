@@ -9,16 +9,10 @@
       margin-bottom: 0;
     }
   }
-  &__item {
-    max-width: 296px;
-  }
 
   &__item:not(:last-child) {
     margin-bottom: 32px;
     @include breakpoint-min($tablet) {
-      margin-bottom: 10px;
-    }
-    @include breakpoint-min($desktop) {
       margin-bottom: 0;
     }
   }
@@ -46,6 +40,8 @@
     @include breakpoint-min($desktop) {
       padding-top: 32px;
       padding-bottom: 32px;
+      font-size: 14px;
+      line-height: calc(14 / 16);
     }
 
     &--color-accent {
@@ -55,7 +51,7 @@
       color: var(--accent-text-color);
 
       @include breakpoint-max(380px) {
-        font-size: 28px;
+        font-size: 26px;
       }
 
       @include breakpoint-min($tablet) {
@@ -63,6 +59,11 @@
         line-height: calc(12 / 14);
         color: var(--primary-text-color);
         text-decoration: none;
+      }
+
+      @include breakpoint-min($desktop) {
+        font-size: 14px;
+        line-height: calc(14 / 16);
       }
     }
   }
@@ -80,10 +81,15 @@
     }
   }
 
-  @include breakpoint-min($desktop) {
+  @include breakpoint-min($tablet) {
     display: flex;
-    align-items: center;
+    flex-direction: column-reverse;
     justify-content: center;
+    gap: 10px;
+  }
+
+  @include breakpoint-min($desktop) {
+    flex-direction: row-reverse;
     gap: 30px;
   }
 }

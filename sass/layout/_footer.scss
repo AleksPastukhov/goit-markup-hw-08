@@ -1,7 +1,6 @@
 // Footer
 .footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  min-width: 320px;
   background-color: var(--background-footer-color);
 
   &__wrapper {
@@ -39,6 +38,11 @@
       max-width: 450px;
       margin-right: auto;
       margin-left: auto;
+    }
+
+    @include breakpoint-min($desktop) {
+      max-width: none;
+      margin: 0;
     }
   }
   &__container {

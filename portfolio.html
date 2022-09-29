@@ -26,8 +26,9 @@
           type="button"
           aria-expanded="false"
           aria-controls="mobile-menu"
+          aria-label="Кнопка мобільного меню"
         >
-          <svg width="40" height="40">
+          <svg width="40" height="40" aria-label="Перемикач мобільного меню">
             <use href="./images/icons.svg#mobile-menu"></use>
           </svg>
         </button>
@@ -52,24 +53,24 @@
           </nav>
           <ul class="contact contact--margin-bottom">
             <li class="contact__item">
-              <a class="contact__link contact__link--color-accent" href="mailto:info@devstudio.com"
-                ><svg class="contact__icon" width="16px" height="12px">
-                  <use href="./images/icons.svg#mail"></use></svg
-                >info@devstudio.com</a
-              >
-            </li>
-            <li class="contact__item">
-              <a class="contact__link" href="tel:+380961111111"
+              <a class="contact__link contact__link--color-accent" href="tel:+380961111111"
                 ><svg class="contact__icon" width="10px" height="16px">
                   <use href="./images/icons.svg#tel"></use></svg
                 >+38 096 111 11 11</a
+              >
+            </li>
+            <li class="contact__item">
+              <a class="contact__link" href="mailto:info@devstudio.com"
+                ><svg class="contact__icon" width="16px" height="12px">
+                  <use href="./images/icons.svg#mail"></use></svg
+                >info@devstudio.com</a
               >
             </li>
           </ul>
           <ul class="socials-list">
             <li class="socials-list__items">
               <a
-                class="socials-list__link socials-list__link--pading-left-0"
+                class="socials-list__link"
                 href=""
                 target="_blank"
                 rel="noopener noreferrer"
@@ -99,7 +100,7 @@
             </li>
             <li class="socials-list__items">
               <a
-                class="socials-list__link socials-list__link--pading-right-0"
+                class="socials-list__link"
                 href=""
                 target="_blank"
                 rel="noopener noreferrer"
@@ -841,7 +842,7 @@
         </div>
       </section>
     </main>
-    <footer class="section footer">
+    <footer class="footer">
       <div class="container footer__container">
         <div class="footer__wrapper">
           <div class="footer__address-box">

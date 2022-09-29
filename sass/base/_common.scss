@@ -23,7 +23,7 @@
   }
 
   @include breakpoint-min($desktop) {
-    max-width: 1600px;
+    max-width: none;
     padding: 94px 0;
   }
 }
