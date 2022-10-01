@@ -473,6 +473,9 @@ summary {
     display: none;
   }
 }
+.open-menu-btn__icon {
+  display: block;
+}
 
 .nav--margin-bottom {
   margin-bottom: auto;
@@ -582,7 +585,7 @@ summary {
     padding-top: 32px;
     padding-bottom: 32px;
     font-size: 14px;
-    line-height: 0.875;
+    line-height: 1.1428571429;
   }
 }
 .contact__link--color-accent {
@@ -607,7 +610,7 @@ summary {
 @media screen and (min-width: 1200px) {
   .contact__link--color-accent {
     font-size: 14px;
-    line-height: 0.875;
+    line-height: 1.1428571429;
   }
 }
 .contact__link:hover, .contact__link:focus {
@@ -1627,6 +1630,7 @@ summary {
   color: var(--white-text-color);
   margin-bottom: 20px;
   text-align: center;
+  padding: 0;
 }
 @media screen and (min-width: 1200px) {
   .footer__logo {

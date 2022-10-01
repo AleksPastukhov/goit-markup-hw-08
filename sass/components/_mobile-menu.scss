@@ -75,4 +75,8 @@
   @include breakpoint-min($tablet) {
     display: none;
   }
+
+  &__icon {
+    display: block;
+  }
 }

@@ -41,7 +41,7 @@
       padding-top: 32px;
       padding-bottom: 32px;
       font-size: 14px;
-      line-height: calc(14 / 16);
+      line-height: calc(16 / 14);
     }
 
     &--color-accent {
@@ -63,7 +63,7 @@
 
       @include breakpoint-min($desktop) {
         font-size: 14px;
-        line-height: calc(14 / 16);
+        line-height: calc(16 / 14);
       }
     }
   }
